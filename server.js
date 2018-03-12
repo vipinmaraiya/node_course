@@ -51,9 +51,9 @@ res.render('about',{
 });
 });
 
-app.get('/project',(req, res)=>{
-res.render('project', {
-    pageTitle:'Project'
+app.get('/projects',(req, res)=>{
+res.render('projects', {
+    pageTitle:'Projects'
 })
 });
 
