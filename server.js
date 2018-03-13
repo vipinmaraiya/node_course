@@ -5,10 +5,11 @@ const fs = require('fs');
 const port = process.env.PORT || 3000;
 
 const app = express();
-hbs.registerPartials(__dirname + '/views/partials');
+
 
 app.set('view engine', 'hbs');
 
+hbs.registerPartials(__dirname + '/views/partials');
 
 app.use((req, res, next)=>{
     let now = new Date().toString();
@@ -61,3 +62,5 @@ res.render('projects', {
 app.listen(port, ()=>{
     console.log(`Server is running on ${port}`);
 })
+
+module.exports = app;
